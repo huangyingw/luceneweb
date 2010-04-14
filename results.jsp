@@ -16,20 +16,6 @@
  -->
 <%@ page import = "  javax.servlet.*, javax.servlet.http.*, java.io.*, org.apache.lucene.analysis.*, org.apache.lucene.analysis.standard.StandardAnalyzer, org.apache.lucene.document.*, org.apache.lucene.index.*, org.apache.lucene.store.*, org.apache.lucene.search.*, org.apache.lucene.queryParser.*, org.apache.lucene.demo.*, org.apache.lucene.demo.html.Entities, java.net.URLEncoder, org.apache.lucene.util.Version" %>
 
-<%
-/*
-
-        This jsp page is deliberatly written in the horrible java directly embedded 
-        in the page style for an easy and concise demonstration of Lucene.
-        Due note...if you write pages that look like this...sooner or later
-        you'll have a maintenance nightmare.  If you use jsps...use taglibs
-        and beans!  That being said, this should be acceptable for a small
-        page demonstrating how one uses Lucene in a web app. 
-
-        This is also deliberately overcommented. ;-)
-
-*/
-%>
 <%!
 public String escapeHTML(String s) {
   s = s.replaceAll("&", "&amp;");
