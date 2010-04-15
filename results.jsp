@@ -17,12 +17,7 @@
 
         try {
           IndexReader reader = IndexReader.open(FSDirectory.open(new File(indexName)), true); // only searching, so read-only=true
-          searcher = new IndexSearcher(reader);         //create an indexSearcher for our page
-                                                        //NOTE: this operation is slow for large
-                                                        //indices (much slower than the search itself)
-                                                        //so you might want to keep an IndexSearcher 
-                                                        //open
-                                                        
+          
         } catch (Exception e) {
         }
 %>
