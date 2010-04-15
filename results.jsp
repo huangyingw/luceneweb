@@ -35,33 +35,3 @@
 <%
 %>
                 <p> I'm sorry I couldn't find what you were looking for. </p>
-<%
-        if (error == false && searcher != null) {                   
-%>
-                
-<%
-                if ((startindex + maxpage) > hits.totalHits) {
-                        thispage = hits.totalHits - startindex;      // set the max index to maxpage or last
-                }                                                   // actual search result whichever is less
-
-                for (int i = startindex; i < (thispage + startindex); i++) {  // for each element
-%>
-<%
-                }
-%>
-<%                if ( (startindex + maxpage) < hits.totalHits) {   //if there are more results...display 
-                                                                   //the more link
-
-                        String moreurl="results.jsp?query=" + 
-                                       URLEncoder.encode(queryString) +  //construct the "more" link
-                                       "&amp;maxresults=" + maxpage + 
-                                       "&amp;startat=" + (startindex + maxpage);
-%>
-                
-<%
-                }
-%>
-<%       }                                            //then include our footer.
-         
-%>
-
