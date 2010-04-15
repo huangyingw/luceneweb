@@ -60,14 +60,10 @@
                                                                       //if it's just "operator error"
                                                                       //send them a nice error HTML
                                                                       
-%>
-<%
                         error = true;                                 //don't bother with the rest of
                                                                       //the page
                 }
         }
-%>
-<%
         if (error == false && searcher != null) {                     // if we've had no errors
                                                                       // searcher != null was to handle
                                                                       // a weird compilation bug 
