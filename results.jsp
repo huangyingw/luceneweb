@@ -2,7 +2,6 @@
 
 <%@include file="header.jsp"%>
 <%
-        boolean error = false;                  //used to control flow for error messages
         String indexName = indexLocation;       //local copy of the configuration variable
         IndexSearcher searcher = null;          //the searcher used to open/search the index
         Query query = null;                     //the Query created by the QueryParser
@@ -24,6 +23,6 @@
                                                         //so you might want to keep an IndexSearcher 
                                                         //open
                                                         
-        } catch (Exception e) {                         //any error that happens is probably due
+        } catch (Exception e) {
         }
 %>
