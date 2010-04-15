@@ -7,11 +7,7 @@
         Query query = null;                     //the Query created by the QueryParser
         TopDocs hits = null;                       //the search results
         int startindex = 0;                     //the first index displayed on this page
-        int maxpage    = 50;                    //the maximum items displayed on this page
-        String queryString = null;              //the query entered in the previous page
-        String startVal    = null;              //string version of startindex
-        String maxresults  = null;              //string version of maxpage
-        int thispage = 0;                       //used for the for/next either maxpage or
+        int thispage = 0;                       //used for the for/next either  or
                                                 //hits.totalHits - startindex - whichever is
                                                 //less
 
