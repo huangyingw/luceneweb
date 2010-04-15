@@ -31,5 +31,3 @@
 <%                error = true;                                  //don't do anything up to the footer
         }
 %>
-<%
-%>
