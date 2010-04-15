@@ -4,11 +4,6 @@
 <%
         String indexName = indexLocation;       //local copy of the configuration variable
         IndexSearcher searcher = null;          //the searcher used to open/search the index
-        Query query = null;                     //the Query created by the QueryParser
-        TopDocs hits = null;                       //the search results
-        int startindex = 0;                     //the first index displayed on this page
-        int thispage = 0;                       //used for the for/next either  or
-                                                //hits.totalHits - startindex - whichever is
                                                 //less
 
         try {
