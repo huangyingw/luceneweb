@@ -27,7 +27,7 @@
         } catch (Exception e) {                         //any error that happens is probably due
                                                         //to a permission problem or non-existant
                                                         //or otherwise corrupt index
-%>
-<%                error = true;                                  //don't do anything up to the footer
+
+                error = true;                                  //don't do anything up to the footer
         }
 %>
