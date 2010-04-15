@@ -33,37 +33,6 @@
         }
 %>
 <%
-       if (error == false) {                                           //did we open the index?
-                queryString = request.getParameter("query");           //get the search criteria
-                startVal    = request.getParameter("startat");         //get the start index
-                maxresults  = request.getParameter("maxresults");      //get max results per page
-                try {
-                        maxpage    = Integer.parseInt(maxresults);    //parse the max results first
-                        startindex = Integer.parseInt(startVal);      //then the start index  
-                } catch (Exception e) { } //we don't care if something happens we'll just start at 0
-                                          //or end at 50
-
-                
-
-                if (queryString == null)
-                        throw new ServletException("no query "+       //if you don't have a query then
-                                                   "specified");      //you probably played on the 
-                                                                      //query string so you get the 
-                                                                      //treatment
-
-                Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_CURRENT);           //construct our usual analyzer
-                try {
-                        QueryParser qp = new QueryParser(Version.LUCENE_CURRENT, "contents", analyzer);
-                        query = qp.parse(queryString); //parse the 
-                } catch (ParseException e) {                          //query and construct the Query
-                                                                      //object
-                                                                      //if it's just "operator error"
-                                                                      //send them a nice error HTML
-                                                                      
-                        error = true;                                 //don't bother with the rest of
-                                                                      //the page
-                }
-        }
         if (error == false && searcher != null) {                     // if we've had no errors
                                                                       // searcher != null was to handle
                                                                       // a weird compilation bug 
