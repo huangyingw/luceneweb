@@ -28,10 +28,8 @@
                                                         //to a permission problem or non-existant
                                                         //or otherwise corrupt index
 %>
-                <p>ERROR opening the Index - contact sysadmin!</p>
 <%                error = true;                                  //don't do anything up to the footer
         }
 %>
 <%
 %>
-                <p> I'm sorry I couldn't find what you were looking for. </p>
