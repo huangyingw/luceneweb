@@ -76,9 +76,7 @@
                                        "&amp;maxresults=" + maxpage + 
                                        "&amp;startat=" + (startindex + maxpage);
 %>
-                <tr>
-                        <td></td><td><a href="<%=moreurl%>">More Results>></a></td>
-                </tr>
+                
 <%
                 }
 %>
