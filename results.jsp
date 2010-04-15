@@ -85,7 +85,6 @@
                 </table>
 
 <%       }                                            //then include our footer.
-         if (searcher != null)
-                searcher.close();
+         
 %>
 
