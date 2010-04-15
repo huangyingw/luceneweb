@@ -1,15 +1,5 @@
 <%@ page import = "  javax.servlet.*, javax.servlet.http.*, java.io.*, org.apache.lucene.analysis.*, org.apache.lucene.analysis.standard.StandardAnalyzer, org.apache.lucene.document.*, org.apache.lucene.index.*, org.apache.lucene.store.*, org.apache.lucene.search.*, org.apache.lucene.queryParser.*, org.apache.lucene.demo.*, org.apache.lucene.demo.html.Entities, java.net.URLEncoder, org.apache.lucene.util.Version" %>
 
-<%!
-public String escapeHTML(String s) {
-  s = s.replaceAll("&", "&amp;");
-  s = s.replaceAll("<", "&lt;");
-  s = s.replaceAll(">", "&gt;");
-  s = s.replaceAll("\"", "&quot;");
-  s = s.replaceAll("'", "&apos;");
-  return s;
-}
-%>
 <%@include file="header.jsp"%>
 <%
         boolean error = false;                  //used to control flow for error messages
@@ -39,7 +29,6 @@ public String escapeHTML(String s) {
                                                         //or otherwise corrupt index
 %>
                 <p>ERROR opening the Index - contact sysadmin!</p>
-                <p>Error message: <%=escapeHTML(e.getMessage())%></p>   
 <%                error = true;                                  //don't do anything up to the footer
         }
 %>
@@ -72,7 +61,6 @@ public String escapeHTML(String s) {
                                                                       //send them a nice error HTML
                                                                       
 %>
-                        <p>Error while parsing query: <%=escapeHTML(e.getMessage())%></p>
 <%
                         error = true;                                 //don't bother with the rest of
                                                                       //the page
@@ -146,4 +134,4 @@ public String escapeHTML(String s) {
          if (searcher != null)
                 searcher.close();
 %>
-<%@include file="footer.jsp"%>        
+
