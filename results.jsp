@@ -16,8 +16,7 @@
                                                 //less
 
         try {
-          IndexReader reader = IndexReader.open(FSDirectory.open(new File(indexName)), true); // only searching, so read-only=true
-          
+          IndexReader reader = IndexReader.open(FSDirectory.open(new File(indexName)), true);
         } catch (Exception e) {
         }
 %>
