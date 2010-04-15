@@ -33,20 +33,9 @@
         }
 %>
 <%
-        if (error == false && searcher != null) {                     // if we've had no errors
-                                                                      // searcher != null was to handle
-                                                                      // a weird compilation bug 
-                thispage = maxpage;                                   // default last element to maxpage
-                hits = searcher.search(query, maxpage);                        // run the query 
-                if (hits.totalHits == 0) {                             // if we got no results tell the user
 %>
                 <p> I'm sorry I couldn't find what you were looking for. </p>
 <%
-                error = true;                                        // don't bother with the rest of the
-                                                                     // page
-                }
-        }
-
         if (error == false && searcher != null) {                   
 %>
                 <table>
