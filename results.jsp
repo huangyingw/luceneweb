@@ -50,21 +50,6 @@
 
                 for (int i = startindex; i < (thispage + startindex); i++) {  // for each element
 %>
-                <tr>
-<%
-                        Document doc = searcher.doc(hits.scoreDocs[i].doc);                    //get the next document 
-                        String doctitle = doc.get("title");            //get its title
-                        String url = doc.get("path");                  //get its path field
-                        if (url != null && url.startsWith("../webapps/")) { // strip off ../webapps prefix if present
-                                url = url.substring(10);
-                        }
-                        if ((doctitle == null) || doctitle.equals("")) //use the path if it has no title
-                                doctitle = url;
-                                                                       //then output!
-%>
-                        <td><a href="<%=url%>"><%=doctitle%></a></td>
-                        <td><%=doc.get("summary")%></td>
-                </tr>
 <%
                 }
 %>
