@@ -38,11 +38,7 @@
 <%
         if (error == false && searcher != null) {                   
 %>
-                <table>
-                <tr>
-                        <td>Document</td>
-                        <td>Summary</td>
-                </tr>
+                
 <%
                 if ((startindex + maxpage) > hits.totalHits) {
                         thispage = hits.totalHits - startindex;      // set the max index to maxpage or last
@@ -65,8 +61,6 @@
 <%
                 }
 %>
-                </table>
-
 <%       }                                            //then include our footer.
          
 %>
